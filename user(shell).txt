@@ -1,0 +1,52 @@
+python manage.py runserver
+
+python manage.py runserver
+
+python manage.py startapp users_app
+
+python manage.py makemigrations
+
+python manage.py migrate
+------------------------------------------
+%%Run the shell and import your User model:
+python manage.py shell
+
+from users_app.models import *
+-----------------------------------------
+Query: Create 3 new users:
+
+User.objects.create(first_name = "Bushra",last_name = "ALqahtani",email_address = 'ggg.gmail.com',age = 22)
+User.objects.create(first_name = "tahani",last_name = "rr",email_address = 'rr.gmail.com',age = 29)
+User.objects.create(first_name = "amal",last_name = "tr",email_address = 'tr.gmail.com',age = 55)
+--------------------------------
+Query: Retrieve all the users:
+User.objects.all()
+--------------
+Query: Retrieve the last user:
+User.objects.last()
+------------
+Query: Retrieve the first user:
+User.objects.first()
+-------------------
+Query: Change the user with id=3 so their last name is Pancakes.:
+
+c = User.objects.get(id=3)
+c.last_name = "pancakes"
+c.save()
+
+
+Query: Delete the user with id=2 from the database:
+
+
+c = User.objects.get(id=2)
+c.delete()
+
+
+BONUS Query: Get all the users, sorted by their first name in descending order
+
+
+User.objects.all().order_by('first_name')
+
+User.objects.all().order_by('-first_name')
+
+Submit your .txt file that contains all the queries you ran in the shell:)
