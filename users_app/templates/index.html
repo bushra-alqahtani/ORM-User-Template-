@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<hr>
+        <div class="container">
+
+            <h1>add user</h1>
+
+          
+            <form method="post" action="">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">first name</label>
+                <input type="text" name="first_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+          
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">last name</label>
+                <input type="text" name="last_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+          
+          
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">email</label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+          
+          
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">age</label>
+                <input type="number" name="age" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+          
+          
+          
+              {% csrf_token %}
+              <button type="submit" class="btn btn-primary">add</button>
+            </form>
+            <br>
+            <button tybe="submit" class="btn btn-primary "> <a href="/show" style="color: white;">show the table</a> </button>
+          </div>
+          
+
+{% endblock %}

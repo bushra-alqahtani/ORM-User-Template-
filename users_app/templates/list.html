@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+          <div class="container">
+
+            <table class="table">
+                <thead>
+                    
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">first name</th>
+                        <th scope="col">last name</th>
+                        <th scope="col">email address</th>
+                        <th scope="col">age</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for u in user %}
+                    <tr>
+                        <th scope="col">{{u.id}}</th>
+                        <th scope="col">{{u.first_name}}</th>
+                        <th scope="col">{{u.last_name}}</th>
+                        <th scope="col">{{u.email_address}}</th>
+                        <th scope="col">{{u.age}}</th>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+          </div>
+
+          {% endblock %}
